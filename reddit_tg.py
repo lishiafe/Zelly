@@ -2,6 +2,7 @@ import logging
 import praw
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
+from decouple import config
 
 # Enable logging
 logging.basicConfig(
@@ -11,7 +12,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Replace with your bot token
-TOKEN = "8008093027:AAGb8ej9BuiE4eGOnaAMxCqACLQsR9RaHSw"
+TOKEN = config("TOKEN")
 
 # Reddit Configuration
 SUBREDDIT_NAME = "askreddit"  # Default subreddit to check
