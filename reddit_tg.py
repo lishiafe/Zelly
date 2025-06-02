@@ -20,8 +20,8 @@ POST_LIMIT = 10             # Number of recent posts to fetch
 
 # --- Reddit Setup ---
 reddit = praw.Reddit(
-    client_id="SdlhaOk-J5V1tNebwbIj-g",
-    client_secret="9aTFhYB2qjLK4kcz0u-_I6dKnRvtYQ",
+    client_id=config("client_id"),
+    client_secret=config("client_secret"),
     user_agent="my_reddit_bot by u/ZealousidealStill451"
 )
 
